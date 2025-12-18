@@ -6,7 +6,10 @@ import { stockPrice } from './data/stock-price.js';
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://beer-ecommerce-challenge.vercel.app'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get('/api/products', (req, res) => {

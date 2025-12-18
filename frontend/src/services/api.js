@@ -10,7 +10,7 @@ export const fetchProducts = async () => {
     }
     return await response.json();
   } catch (error) {
-    window.alert(`Error: ${error.message}`);
+    console.error('Error fetching products:', error);
     throw error;
   }
 };
@@ -23,7 +23,7 @@ export const fetchStockPrice = async (sku) => {
     }
     return await response.json();
   } catch (error) {
-    window.alert(`Error: ${error.message}`);
+    console.error('Error fetching stock price:', error);
     throw error;
   }
 };
