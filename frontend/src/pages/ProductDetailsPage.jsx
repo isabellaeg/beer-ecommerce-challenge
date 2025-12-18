@@ -74,12 +74,7 @@ function ProductDetailsPage() {
   }, [product]);
 
   if (loading || !product) {
-    return (
-      <>
-        <div className={`details-overlay ${isClosing ? 'closing' : ''}`} onClick={handleOverlayClick}></div>
-        <div className={`details-container ${isClosing ? 'closing' : ''}`}>Loading...</div>
-      </>
-    );
+    return null;
   }
 
   return (
